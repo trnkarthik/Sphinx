@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 03, 2013 at 07:40 PM
+-- Generation Time: Mar 05, 2013 at 08:39 PM
 -- Server version: 5.5.8-log
 -- PHP Version: 5.4.3
 
@@ -87,6 +87,33 @@ CREATE TABLE IF NOT EXISTS `sp_products_links_clicks` (
 CREATE TABLE IF NOT EXISTS `sp_product_version` (
   `id` int(11) NOT NULL,
   `version` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sp_user_details`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_user_details` (
+  `user_id` varchar(30) NOT NULL,
+  `user_first_name` varchar(50) NOT NULL,
+  `user_last_name` varchar(50) NOT NULL,
+  `user_dob` date NOT NULL,
+  `user_gender` tinyint(2) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sp_user_login`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_user_login` (
+  `mode` tinyint(2) NOT NULL DEFAULT '0',
+  `user_id` varchar(30) NOT NULL,
+  `user_email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL DEFAULT 'g36'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
