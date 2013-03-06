@@ -144,9 +144,17 @@ color: black;
 font-weight: bold;
 font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 text-shadow: 0.1em 0.1em #E6E6E6;
-padding-top: 20px;
+padding-top: 15px;
+padding-bottom: 10px;
+border-bottom: 1px solid #CCC;
+background: #CECECE;
 font-size: 1.3em;
 }
+
+.image-grid li strong:hover {
+background: #BABBBB;
+}
+
 li strong {
 display: block;
 }

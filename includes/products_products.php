@@ -81,9 +81,9 @@ include("connect.php");
 	
 	?>	
     <li data-id="id-<?php echo $i ?>" data-type="<?php echo $row[8] ?>">
-	 <a href="product_desc.php?product_id=<?php echo $row[0]?>"> 
+	 <a href="product_desc.php?product_id=<?php echo $row[0]?>">
+	 	 <strong><?php echo $row[1] ?></strong>
 	 <img src="<?php echo $row[4] ?>" width="128" height="128" alt="" />
-	 <strong><?php echo $row[1] ?></strong>
 	 <div data-type="size" class="product_desc"><?php echo $row[2] ?></span>
 	 </a>
     </li>
