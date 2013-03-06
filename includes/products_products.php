@@ -36,6 +36,12 @@ include("connect.php");
 	 left: 80%;
 	 width: 23%;
       }
+      .product_desc{
+	 padding: 15px;
+      }
+      .more_desc{
+	 padding: 15px;
+      }
    </style>
    
  <form id="filter">
@@ -75,11 +81,11 @@ include("connect.php");
 	
 	?>	
     <li data-id="id-<?php echo $i ?>" data-type="<?php echo $row[8] ?>">
-    <a href="product_desc.php?product_id=<?php echo $row[0]?>"> 
-    <img src="<?php echo $row[4] ?>" width="128" height="128" alt="" />
-    <strong><?php echo $row[1] ?></strong>
-    <span data-type="size"><?php echo $row[2] ?></span>
-    </a>
+	 <a href="product_desc.php?product_id=<?php echo $row[0]?>"> 
+	 <img src="<?php echo $row[4] ?>" width="128" height="128" alt="" />
+	 <strong><?php echo $row[1] ?></strong>
+	 <div data-type="size" class="product_desc"><?php echo $row[2] ?></span>
+	 </a>
     </li>
 	<?php 
     }

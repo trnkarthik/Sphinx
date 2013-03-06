@@ -3,7 +3,7 @@
 <head>
     <style>
         body {
-            font: 14px/18px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
             color: #EFEFEF;
         }
         
@@ -30,6 +30,7 @@
             border-top-left-radius: 10px;
             */
             border-top-right-radius: 10px;
+            
         }
         p{
             padding: 5px;

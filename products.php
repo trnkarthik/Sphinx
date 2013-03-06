@@ -73,7 +73,8 @@ body{
 a, a:visited {
     text-decoration:none;
     outline:none;
-    color:#54a6de;
+    color:#6D6D6D;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 a:hover{
@@ -139,7 +140,12 @@ margin-right: auto;
 padding-top: 15px;
 }
 .image-grid li strong {
-color: rgba(10, 0, 0, 0.78);
+color: black;
+font-weight: bold;
+font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+text-shadow: 0.1em 0.1em #E6E6E6;
+padding-top: 20px;
+font-size: 1.3em;
 }
 li strong {
 display: block;
@@ -296,8 +302,8 @@ $(function() {
 
 </script>
  </div>
-			
-	
 	
     </body>
+    	<?php 	include("includes/home_footer.php");	?>
+
 </html>
