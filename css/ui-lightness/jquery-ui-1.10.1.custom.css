@@ -195,7 +195,7 @@ button.ui-button::-moz-focus-inner {
 ----------------------------------*/
 .ui-widget {
 	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
-	font-size: 1.1em;
+	font-size: 1em;
 }
 .ui-widget .ui-widget {
 	font-size: 1em;
@@ -231,9 +231,12 @@ button.ui-button::-moz-focus-inner {
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
 	border: 1px solid #cccccc;
-	background: #f6f6f6 url(images/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x;
+	background: #f1f1f1;
 	font-weight: bold;
-	color: #1c94c4;
+	color: #787878;
+	-moz-box-shadow: 2px 2px 2px #ccc;
+	-webkit-box-shadow: 2px 2px 2px #ccc;
+	box-shadow: 2px 2px 2px #ccc;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -247,10 +250,10 @@ button.ui-button::-moz-focus-inner {
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
-	border: 1px solid #fbcb09;
-	background: #fdf5ce url(images/ui-bg_glass_100_fdf5ce_1x400.png) 50% 50% repeat-x;
+	border: 1px solid #ccc;
+	background: #f9f9f9;
 	font-weight: bold;
-	color: #c77405;
+	color: #484848;
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
@@ -263,9 +266,13 @@ button.ui-button::-moz-focus-inner {
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
 	border: 1px solid #fbd850;
-	background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+	background: white;
 	font-weight: bold;
-	color: #eb8f00;
+	color: black;
+	border: 1px solid #ccc;
+	-moz-box-shadow: 4px 4px 4px #ccc;
+	-webkit-box-shadow: 4px 4px 4px #ccc;
+	box-shadow: 4px 4px 4px #ccc;
 }
 .ui-state-active a,
 .ui-state-active a:link,

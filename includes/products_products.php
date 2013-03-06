@@ -27,22 +27,36 @@ include("connect.php");
       #filter_by_type{
 	 position: relative;
 	 top: 40px;
-	 left: 39%;
+	 left: 38.5%;
+	 width: 23%;
+      }
+      #filter_by_sort{
+	 position: relative;
+	 top: 6px;
+	 left: 80%;
+	 width: 23%;
       }
    </style>
    
  <form id="filter">
  
     <div id="radio">
-	<fieldset id="filter_by_type">
-   <input type="radio" name="radio1" id="radio1" filters="type" value="all" checked="checked"  /><label for="radio1">Everything</label>
-    <input type="radio" name="radio1" id="radio2" filters="type" value="Application" /><label for="radio2">Applications</label>
-    <input type="radio" name="radio1" id="radio3" filters="type" value="Game" /><label for="radio3">Games</label>
-    </fieldset>
- <fieldset>
-    <input type="radio" id="radio4" name="sort" filters="sort" value="size" checked="checked"/><label for="radio4">Size</label>
-    <input type="radio" id="radio5" name="sort" filters="sort" value="name"/><label for="radio5">Name</label>
-    </fieldset>
+      <fieldset id="filter_by_type">
+	 <input type="radio" name="radio1" id="radio1" filters="type" value="all" checked="checked"  /><label for="radio1">All Products</label>
+	 <input type="radio" name="radio1" id="radio2" filters="type" value="Application" /><label for="radio2">Applications</label>
+	 <input type="radio" name="radio1" id="radio3" filters="type" value="Game"/><label for="radio3"
+		  style="border-bottom-right-radius: 5px;
+		  border-top-right-radius: 5px;"
+		  >Games</label>
+      </fieldset>
+ 
+      <fieldset id="filter_by_sort">
+	 <input type="radio" id="radio4" name="sort" filters="sort" value="size" checked="checked"/><label for="radio4"
+		  style="border-bottom-left-radius: 5px;
+		  border-top-left-radius: 5px;"
+	 >Size</label>
+	 <input type="radio" id="radio5" name="sort" filters="sort" value="name"/><label for="radio5">Name</label>
+      </fieldset>
 </div>
     <script>
   
