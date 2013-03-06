@@ -73,7 +73,8 @@ body{
 a, a:visited {
     text-decoration:none;
     outline:none;
-    color:#54a6de;
+    color:#6D6D6D;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 a:hover{
@@ -139,8 +140,21 @@ margin-right: auto;
 padding-top: 15px;
 }
 .image-grid li strong {
-color: rgba(10, 0, 0, 0.78);
+color: black;
+font-weight: bold;
+font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+text-shadow: 0.1em 0.1em #E6E6E6;
+padding-top: 15px;
+padding-bottom: 10px;
+border-bottom: 1px solid #CCC;
+background: #CECECE;
+font-size: 1.3em;
 }
+
+.image-grid li strong:hover {
+background: #BABBBB;
+}
+
 li strong {
 display: block;
 }
@@ -216,7 +230,7 @@ border: 0px solid #c0c0c0;
 	
 	<?php include("includes/header.php");?>
 	
-    <div class="container">
+    <div id="main_content" class="container">
 	<?php   include("includes/products_products.php");  ?>
 </ul>
 
@@ -296,8 +310,8 @@ $(function() {
 
 </script>
  </div>
-			
-	
 	
     </body>
+    	<?php 	include("includes/home_footer.php");	?>
+
 </html>

@@ -160,7 +160,9 @@ cursor: pointer;
 
 }
 
-
+#main_content{
+    min-height: 667px;
+}
 
 
 
@@ -168,6 +170,7 @@ cursor: pointer;
 font-size: 13px;
 position: relative;
 background-color: #333;
+bottom: -84px;
 }
 
 
