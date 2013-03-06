@@ -6,7 +6,7 @@ include("connect.php");
    
    <style>
       .image-grid li{
-	 background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+	 background: none repeat scroll 0 0 rgba(255, 255, 255);
 	 border-radius: 5px 5px 5px 5px;
 	 box-shadow: 4px 4px rgba(0, 0, 0, 0.05);
 	 margin-bottom: 2.8125%;
@@ -15,6 +15,8 @@ include("connect.php");
 	 top: 20px;
 	 width: 270px;
 	 height: 272px;
+   	 background: rgb(255, 255, 255);
+	 border: 1px solid rgb(231, 231, 231);
       }
       .clearfix{
 	 background: ;
@@ -22,12 +24,17 @@ include("connect.php");
 	 margin-left: auto;
 	 margin-right: auto;
       }
+      #filter_by_type{
+	 position: relative;
+	 top: 40px;
+	 left: 39%;
+      }
    </style>
    
  <form id="filter">
  
     <div id="radio">
-	<fieldset>
+	<fieldset id="filter_by_type">
    <input type="radio" name="radio1" id="radio1" filters="type" value="all" checked="checked"  /><label for="radio1">Everything</label>
     <input type="radio" name="radio1" id="radio2" filters="type" value="Application" /><label for="radio2">Applications</label>
     <input type="radio" name="radio1" id="radio3" filters="type" value="Game" /><label for="radio3">Games</label>

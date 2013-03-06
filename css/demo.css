@@ -257,14 +257,17 @@ line-height: 0;
 
 
 .box {
-background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+background: rgb(255, 255, 255);
 border-radius: 5px 5px 5px 5px;
 box-shadow: 4px 4px rgba(0, 0, 0, 0.05);
 margin-bottom: 2.8125%;
 position: relative;
 text-align: center;
 top: 20px;
+border: 1px solid rgb(231, 231, 231);
 }
+
+
 .span3 {
 width: 270px;
 }

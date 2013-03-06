@@ -63,11 +63,6 @@
     General Styles
 --------------------------*/
 
-
-html{
-    background: url('../img/bg_tile.jpg') #18222b;
-}
-
 body{
     color:#fcfcfc;
     font:14px/1.3 'Segoe UI',Arial, sans-serif;
@@ -84,34 +79,6 @@ a, a:visited {
 a:hover{
     text-decoration:underline;
 }
-
-
-/*----------------------------
-    Headers & Footers
------------------------------*/
-
-
-header{
-    background:url('../img/header.png') repeat-x;
-    display: block;
-    height: 220px;
-    padding: 10px;
-}
-
-h1{
-    background:url('../img/logo.png') no-repeat center center;
-    height: 80px;
-    margin: 75px auto;
-    overflow: hidden;
-    text-align: center;
-    text-indent: -99999px;
-}
-
-
-
-/*----------------------------
-    Green filter bar
------------------------------*/
 
 
 /*----------------------------
@@ -149,52 +116,10 @@ h1{
 }
 
 
-/*----------------------------
-    The Footer
------------------------------*/
-
-
-footer{
-    display:block;
-    background-color:#13181d;
-    position:fixed;
-    width:100%;
-    height:70px;
-    bottom:0;
-    left:0;
-    z-index: 100000;
-}
-
-footer h2{
-    font-size:20px;
-    font-weight:normal;
-    left:50%;
-    margin-left:-400px;
-    padding:22px 0;
-    position:absolute;
-    width:400px;
-    color:#eee;
-}
-
-footer a.tzine,a.tzine:visited{
-    background:url("../img/tzine.png") no-repeat right top;
-    border:none;
-    text-decoration:none;
-    color:#FCFCFC;
-    font-size:12px;
-    height:70px;
-    left:50%;
-    line-height:31px;
-    margin:23px 0 0 110px;
-    position:absolute;
-    top:0;
-    width:290px;
-}
-
 /*Quick sand css*/
 
 .image-grid {
-width: 74%;
+width: 1010px;
 }
 .image-grid li {
 width: 128px;
@@ -224,12 +149,7 @@ font-weight: 400;
 color: #fff;
 text-shadow: rgba(255,255,255,0.85) 0 0 3px;
 }
-.image-grid li {
-text-align: center;
-font-family: "Helvetica Neue",sans-serif;
-line-height: 17px;
-color: #686f74;
-}
+
 .clearfix:after {
 	content: ".";
 	display: block;
