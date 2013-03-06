@@ -3,6 +3,27 @@
 include("connect.php");
 ?>
 <link href="css/ui-lightness/jquery-ui-1.10.1.custom.css" rel="stylesheet">
+   
+   <style>
+      .image-grid li{
+	 background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+	 border-radius: 5px 5px 5px 5px;
+	 box-shadow: 4px 4px rgba(0, 0, 0, 0.05);
+	 margin-bottom: 2.8125%;
+	 position: relative;
+         text-align: center;
+	 top: 20px;
+	 width: 270px;
+	 height: 272px;
+      }
+      .clearfix{
+	 background: ;
+         display: block;
+	 margin-left: auto;
+	 margin-right: auto;
+      }
+   </style>
+   
  <form id="filter">
  
     <div id="radio">

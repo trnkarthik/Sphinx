@@ -194,7 +194,7 @@ footer a.tzine,a.tzine:visited{
 /*Quick sand css*/
 
 .image-grid {
-width: 840px;
+width: 74%;
 }
 .image-grid li {
 width: 128px;
@@ -209,6 +209,9 @@ overflow: hidden;
 }
 .image-grid li img, .image-grid li strong {
 display: block;
+margin-left: auto;
+margin-right: auto;
+padding-top: 15px;
 }
 .image-grid li strong {
 color: rgba(10, 0, 0, 0.78);
