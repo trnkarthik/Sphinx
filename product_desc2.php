@@ -1,23 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-
+        
 	<?php include("includes/meta_details.php"); ?>
-	
-	<link rel="stylesheet" type="text/css" href="css/style_alt.css" />
-
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
-        
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<!--
-	<script src="js/jquery-1.9.1.js"></script> -->
-	<script src="js/jquery-ui-1.10.1.custom.js"></script>
-        
-	
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+
         <link rel="stylesheet" href="css/prod_desc_style.css" type="text/css" media="screen"/>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
         <script type="text/javascript" src="js/sliding.form.js"></script>
-	
     </head>
     <style>
         span.reference{
@@ -44,59 +35,55 @@
         }
     </style>
     <body>
-	    <?php include("includes/header.php");?>
-
-        <div id="main_content">
-	    
-            <div id="wrapper">
+        
+        <div id="prod_desc_content">
+            <div id="prod_desc_wrapper">
 		
-		<div id="navigation" style="display:none;">
+		  <div id="prod_desc_navigation" style="display:none;">
                     <ul>
-                        <li class="selected">
-                            <a href="#">Description</a>
+                        <li>
+                            <a href="#">Account</a>
                         </li>
                         <li>
-                            <a href="#">Screen Shots</a>
+                            <a href="#">Personal Details</a>
                         </li>
                         <li>
-                            <a href="#">Reviews</a>
+                            <a href="#">Payment</a>
                         </li>
-                        
+                        <li>
+                            <a href="#">Settings</a>
+                        </li>
+						<li>
+                            <a href="#">Confirm</a>
+                        </li>
                     </ul>
-                </div>
-		
+                </div>		
 		
                 <div id="steps">
                     <form id="formElem" name="formElem" action="" method="post">
-                        <fieldset class="step_prod_desc">
-                            <legend>Description</legend>
-			    Product description comes here.
+                        <fieldset class="step">
+                            <legend>Account</legend>
+                            Tab 1
                         </fieldset>
-                        <fieldset class="step_prod_desc">
-                            <legend>Screen Shots</legend>
-                            
-			    ScreenShots comes here.Use apple view style plugin for displaying the images.
-			    
+                        <fieldset class="step">
+                            <legend>Personal Details</legend>
+                            Tab 2
                         </fieldset>
-                        <fieldset class="step_prod_desc">
-                            <legend>Reviews</legend>
-                            
-			    User Reviews comes here
-			    
+                        <fieldset class="step">
+                            <legend>Payment</legend>
+                            Tab 3
                         </fieldset>
-                        
+                        <fieldset class="step">
+                            <legend>Settings</legend>
+                            Tab 4
+                        </fieldset>
+			<fieldset class="step">
+                            <legend>Confirm</legend>
+			    Tab 5
+                        </fieldset>
                     </form>
                 </div>
-                
             </div>
-	    
-	    <div id="prod_desc_left_bar">
-		
-	    </div>
-	    
-	    
         </div>
-	
-	    <?php include("includes/home_footer.php");?>
     </body>
 </html>
