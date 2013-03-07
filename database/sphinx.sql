@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Mar 05, 2013 at 08:39 PM
--- Server version: 5.5.8-log
--- PHP Version: 5.4.3
+-- Host: 127.0.0.1
+-- Generation Time: Mar 07, 2013 at 06:48 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,82 @@ SET time_zone = "+00:00";
 --
 -- Database: `sphinx`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sp_ideas`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_ideas` (
+  `idea_id` int(11) NOT NULL AUTO_INCREMENT,
+  `idea_author_id` varchar(30) NOT NULL,
+  `idea_title` varchar(200) NOT NULL,
+  `idea_description` text NOT NULL,
+  `idea_datetime` datetime NOT NULL,
+  PRIMARY KEY (`idea_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sp_idea_comments`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_idea_comments` (
+  `idea_comment_id` int(13) NOT NULL AUTO_INCREMENT,
+  `idea_comment_author_id` varchar(30) NOT NULL,
+  `idea_comment` text NOT NULL,
+  `idea_coment_datetime` datetime NOT NULL,
+  PRIMARY KEY (`idea_comment_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sp_idea_comment_ratings`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_idea_comment_ratings` (
+  `idea_comment_id` int(13) NOT NULL,
+  `idea_comment_rating_author_id` varchar(30) NOT NULL,
+  `idea_comment_rating_datetime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sp_idea_ratings`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_idea_ratings` (
+  `idea_id` int(11) NOT NULL,
+  `idea_rating_author_id` varchar(30) NOT NULL,
+  `idea_rating_datetime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sp_idea_tags`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_idea_tags` (
+  `idea_id` int(11) NOT NULL,
+  `idea_tag` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sp_idea_views`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_idea_views` (
+  `idea_id` int(11) NOT NULL,
+  `idea_views` int(6) NOT NULL,
+  UNIQUE KEY `idea_id` (`idea_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
