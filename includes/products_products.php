@@ -19,7 +19,6 @@ include("connect.php");
 	 border: 1px solid rgb(231, 231, 231);
       }
       .clearfix{
-	 background: ;
          display: block;
 	 margin-left: auto;
 	 margin-right: auto;
