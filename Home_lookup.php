@@ -2,63 +2,54 @@
 <html lang="en">
     <head>
 
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-            <title>Sphinx Corporation</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-                <meta name="description" content="Slideshow with jmpress.js" />
-                <meta name="keywords" content="jmpress, slideshow, container, plugin, jquery, css3" />
-                <meta name="author" content="for Codrops" />
-                <link rel="shortcut icon" href="../favicon.ico"> 
-                    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
-                        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-                        <link rel="stylesheet" type="text/css" href="css/style_alt.css" />
-                        <link rel="stylesheet" type="text/css" href="css/joyride-2.0.3.css" />
-                        <!--[if lt IE 9]>
-                        <link rel="stylesheet" type="text/css" href="css/style_ie.css" />
-                        <![endif]-->
-                        <!-- jQuery -->
-                        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-                        <!-- jmpress plugin -->
-                        <script type="text/javascript" src="js/jmpress.min.js"></script>
-                        <!-- jmslideshow plugin : extends the jmpress plugin -->
-                        <script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
-                        <script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
+	<?php include("includes/meta_details.php"); ?>
+        
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style_alt.css" />
+        <link rel="stylesheet" type="text/css" href="css/joyride-2.0.3.css" />
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="css/style_ie.css" />
+        <![endif]-->
+        <!-- jQuery -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <!-- jmpress plugin -->
+        <script type="text/javascript" src="js/jmpress.min.js"></script>
+        <!-- jmslideshow plugin : extends the jmpress plugin -->
+        <script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
+        <script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
 
-                        <script type="text/javascript" src="fancybox/source/jquery.fancybox.js"></script>
-                        <script type="text/javascript" src="fancybox/source/jquery.easing-1.3.pack.js"></script>
-                        <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
-                        <script type="text/javascript" src="js/jquery.cookie.js"></script>
-                        <script type="text/javascript" src="js/jquery.joyride-2.0.3.js"></script>
-                        <script type="text/javascript" src="js/modernizr.mq.js"></script>
-                        <link rel="stylesheet" type="text/css" href="css/secondary.css" />
-                        <noscript>
-                            <style>
-                                .step {
-                                    width: 100%;
-                                    position: relative;
-                                }
-                                .step:not(.active) {
-                                    opacity: 1;
-                                    filter: alpha(opacity=99);
-                                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
-                                }
-                                .step:not(.active) a.jms-link{
-                                    opacity: 1;
-                                    margin-top: 40px;
-                                }
-                            </style>
-                        </noscript>
-                        </head>
+        <script type="text/javascript" src="fancybox/source/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="fancybox/source/jquery.easing-1.3.pack.js"></script>
+        <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="js/jquery.joyride-2.0.3.js"></script>
+        <script type="text/javascript" src="js/modernizr.mq.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/secondary.css" />
+        <noscript>
+            <style>
+                .step {
+                    width: 100%;
+                    position: relative;
+                      }
+                .step:not(.active) {
+                    opacity: 1;
+                    filter: alpha(opacity=99);
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+                      }
+                .step:not(.active) a.jms-link{
+                    opacity: 1;
+                    margin-top: 40px;
+                      }
+            </style>
+        </noscript>
+        </head>
 
-
-
-                        <body>
-
-                            <div class="main_header">
-                                <?php
-                                include("includes/header.php");
-                                ?>
+        <body>
+            <div class="main_header">
+                <?php
+                include("includes/header.php");
+                ?>
 
                             </div>
 
