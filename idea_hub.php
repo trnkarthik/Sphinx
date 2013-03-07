@@ -100,9 +100,9 @@
         } else {
           var $filteredData = $data.find('li[data-type=' + $($filterType+":checked").val() + ']');
         }
-    
+    /*......................Changes required here after idea hub is complete...........................*/
         // if sorted by size
-        if ($('#filter input[name="sort"]:checked').val() == "size") {
+        if ($('#filter input[name="sort"]:checked').val() == "rating") {
           var $sortedData = $filteredData.sorted({
             by: function(v) {
               return parseFloat($(v).find('span[data-type=size]').text());
@@ -116,6 +116,7 @@
             }
           });
         }   
+        /*......................Changes required here after idea hub is complete...........................*/
     
         // finally, call quicksand
         $applications.quicksand($sortedData, {
@@ -128,6 +129,13 @@
     });
     
     </script>
+    <br/><br/><br/>
+    <form action="handles/idea_handle.php" method="post">
+        <label for="idea_title">Idea Title</label>
+        <input type="text" name="idea_title" />
+        <textarea name="idea">Idea Description</textarea>
+        <input type="submit" name="idea_submit" />
+    </form>
      </div>
     	
     </body>
