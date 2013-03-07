@@ -11,5 +11,10 @@ if (!empty($_POST['idea_submit'])) {
     $query .= "values(null, '$author' ,'$title', '$idea', now() )";
     echo $query;
     $result = mysql_query($query);
+    if(!$result){
+        
+    }  else {
+        
+    }
 }
 ?>

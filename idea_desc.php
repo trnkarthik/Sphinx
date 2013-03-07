@@ -30,9 +30,8 @@ $query="SELECT * FROM sp_ideas where idea_id='".$_GET['idea_id']."' ";
         }
         ?>
  <br/><br/><br/>
-    <form action="idea_handle.php" method="post">
-        <label for="idea_title">Idea Title</label>
-        <input type="text" name="idea_title" />
-        <textarea name="idea">Idea Description</textarea>
-        <input type="submit" name="idea_submit" />
+    <form action="handles/comment_handle.php" method="post">
+        <input type="hidden" name="idea_id" value="<?php echo $_GET['idea_id'] ?>" />
+        <textarea name="comment">Comment</textarea>
+        <input type="submit" name="comment_submit" />
     </form>

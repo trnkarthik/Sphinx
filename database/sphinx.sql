@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2013 at 06:48 PM
+-- Generation Time: Mar 07, 2013 at 10:49 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -33,7 +33,17 @@ CREATE TABLE IF NOT EXISTS `sp_ideas` (
   `idea_description` text NOT NULL,
   `idea_datetime` datetime NOT NULL,
   PRIMARY KEY (`idea_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `sp_ideas`
+--
+
+INSERT INTO `sp_ideas` (`idea_id`, `idea_author_id`, `idea_title`, `idea_description`, `idea_datetime`) VALUES
+(1, '', 'Bmi calculator', 'calculates your BMI', '2013-03-07 14:17:03'),
+(2, '', 'currency cobnverter', 'Idea Description', '2013-03-07 14:51:18'),
+(3, '', 'disco lights', 'Idea Description', '2013-03-07 14:58:44'),
+(4, '', 'new one', 'Idea Description', '2013-03-07 16:34:04');
 
 -- --------------------------------------------------------
 
@@ -45,9 +55,17 @@ CREATE TABLE IF NOT EXISTS `sp_idea_comments` (
   `idea_comment_id` int(13) NOT NULL AUTO_INCREMENT,
   `idea_comment_author_id` varchar(30) NOT NULL,
   `idea_comment` text NOT NULL,
-  `idea_coment_datetime` datetime NOT NULL,
+  `idea_comment_datetime` datetime NOT NULL,
+  `idea_id` int(11) NOT NULL,
   PRIMARY KEY (`idea_comment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `sp_idea_comments`
+--
+
+INSERT INTO `sp_idea_comments` (`idea_comment_id`, `idea_comment_author_id`, `idea_comment`, `idea_comment_datetime`, `idea_id`) VALUES
+(1, '', 'Comment', '2013-03-07 16:25:54', 1);
 
 -- --------------------------------------------------------
 
