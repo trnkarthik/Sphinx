@@ -82,8 +82,13 @@ include("connect.php");
    
       <div id="filter_by_type">
 	<form method="get" action="/search" id="search">
-		  <input name="q" type="text" size="40" placeholder="Search..." id="search_box"
-		  style="-webkit-box-shadow: 3px 3px 3px #ccc;"/>
+		  <input name="q" type="text" size="40" placeholder="Search..."
+		  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'"
+		  id="search_box"
+		  style="-webkit-box-shadow: 3px 3px 3px #ccc;
+			 -moz-box-shadow: 3px 3px 3px #ccc;
+			 box-shadow: 3px 3px 3px #ccc;
+"/>
         </form>	
       </div>
 
