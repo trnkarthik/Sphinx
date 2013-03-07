@@ -9,7 +9,7 @@
         <meta name="description" content="Slideshow with jmpress.js" />
         <meta name="keywords" content="jmpress, slideshow, container, plugin, jquery, css3" />
         <meta name="author" content="for Codrops" />
-	 <link rel="stylesheet" type="text/css" href="changes/css/style_alt.css" />
+	
         <link rel="shortcut icon" href="../favicon.ico"> 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
