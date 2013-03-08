@@ -32,12 +32,18 @@ include("connect.php");
         top: 25px;
         padding-bottom: 10px;
     }
-    
+
     #filter_by_sort{
         position: relative;
         top: 6px;
         left: 80%;
         width: 23%;
+        border: 0px;
+    }
+    #sort_order{
+        position: relative;
+        top: 26px;
+        left: 80%;
         border: 0px;
     }
     .product_desc{
@@ -46,14 +52,14 @@ include("connect.php");
     .more_desc{
         padding: 15px;
     }
-   #sphinx_search{
+    #sphinx_search{
         position: relative;
         top: 40px;
         left: 38.5%;
     }
 </style>
 
-<?php include("sphinx_search.php")?>
+<?php include("sphinx_search.php") ?>
 
 <div id="radio">
 
@@ -63,43 +69,58 @@ include("connect.php");
                                                                                                                 style="border-bottom-left-radius: 5px;
                                                                                                                 border-top-left-radius: 5px;"
                                                                                                                 >Rating</label>
-            <input type="radio" id="radio5" name="sort" filters="sort" value="name"/><label for="radio5">Name</label>
+            <input type="radio" id="radio5" name="sort" filters="sort" value="title"/><label for="radio5">Title</label>
+        </fieldset>
+
+        <fieldset id="sort_order">
+            <input type="radio" id="radio6" name="order" filters="order" value="asc" /><label for="radio6"
+                                                                                              style="border-bottom-left-radius: 5px;
+                                                                                              border-top-left-radius: 5px;"
+                                                                                              >Asc</label>
+            <input type="radio" id="radio7" name="order" filters="order" value="desc" checked="checked"/><label for="radio7">Desc</label>
         </fieldset>
 </div>
 <script>
   
-    $( "#radio" ).buttonset();
+    $( "#filter_by_sort" ).buttonset();
+    $( "#sort_order" ).buttonset();
 </script>
 </form>
 
-
-<ul id="applications" class="image-grid clearfix ">
+    <div class="image-grid clearfix">
+<ul id="applications" class=" ">
     <?php
     //
 
-    $query = "Select * from sp_ideas";
+    $query = "SELECT a.idea_id ,a.idea_author_id,a.idea_title,a.idea_description,
+        a.idea_datetime ,count(b.idea_id) as rating
+        FROM `sp_ideas` a 
+        left join `sp_idea_ratings` b on  a.idea_id=b.idea_id 
+        group by b.idea_id
+        order by rating desc";
     $result = mysql_query($query);
 
     for ($i = 0; $row = mysql_fetch_array($result, MYSQL_NUM); $i++) {
         ?>	
-        <li data-id="id-<?php echo $i ?>" data-type="<?php echo 'idea' ?>">
+        <li data-id="id-<?php echo $row[0] ?>" data-type="<?php echo 'idea' ?>">
             <a href="idea_desc.php?idea_id=<?php echo $row[0] ?>">
                 <strong><?php echo $row[2] ?> 
                     <span class="idea_rating">
-                        <?php // echo $row[2] ?>
+                        <?php echo $row[5] ?>
                     </span>
                 </strong>
                 <span class="idea_author">
                     by  <?php echo $row[1] ?>
                 </span>
                 <span class="idea_time">
-                 at   <?php echo $row[4] ?>
+                    at   <?php echo $row[4] ?>
                 </span>
-                <div class="product_desc"><?php echo $row[3] ?></span>
+                <div class="idea_desc"><?php echo $row[3] ?></span>
             </a>
         </li>
         <?php
     }
+   
 
     /* 	$query="SELECT * FROM sp_products where visibility=1 ";
 
@@ -118,6 +139,7 @@ include("connect.php");
       } */
     ?>
 	
-
+ </ul>
+    </div>
 
 

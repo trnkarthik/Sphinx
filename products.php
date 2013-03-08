@@ -116,7 +116,8 @@ $(function() {
     // finally, call quicksand
     $applications.quicksand($sortedData, {
       duration: 800,
-      easing: 'swing'
+      easing: 'swing',
+      adjustHeight: 'dynamic'
     });
 
   });
