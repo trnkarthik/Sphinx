@@ -42,24 +42,42 @@
             text-shadow:1px 1px 1px #fff;
             padding:20px;
         }
+	#sphinx_search {
+	    position: relative;
+	    top: 10px;
+	    }
     </style>
     <body>
 	    <?php include("includes/header.php");?>
 
         <div id="main_content">
 	    
+	    <div id="mini_topbar">
+		
+		<?php include("includes/sphinx_search.php")?>
+
+		
+		
+	    </div>
+	    
             <div id="wrapper">
 		
 		<div id="navigation" style="display:none;">
                     <ul>
                         <li class="selected">
-                            <a href="#">Description</a>
+                            <a href="#"
+			    style = "border-bottom-left-radius: 10px;
+				    border-top-left-radius: 10px;"
+			    >Description</a>
                         </li>
                         <li>
                             <a href="#">Screen Shots</a>
                         </li>
                         <li>
-                            <a href="#">Reviews</a>
+                            <a href="#"
+			    style = "border-bottom-right-radius: 10px;
+				     border-top-right-radius: 10px;"
+			    >Reviews</a>
                         </li>
                         
                     </ul>
@@ -69,17 +87,14 @@
                 <div id="steps">
                     <form id="formElem" name="formElem" action="" method="post">
                         <fieldset class="step_prod_desc">
-                            <legend>Description</legend>
 			    Product description comes here.
                         </fieldset>
                         <fieldset class="step_prod_desc">
-                            <legend>Screen Shots</legend>
                             
 			    ScreenShots comes here.Use apple view style plugin for displaying the images.
 			    
                         </fieldset>
                         <fieldset class="step_prod_desc">
-                            <legend>Reviews</legend>
                             
 			    User Reviews comes here
 			    
@@ -91,6 +106,10 @@
             </div>
 	    
 	    <div id="prod_desc_left_bar">
+		
+		<div id="left_bar_prod_image">
+		    
+		</div>
 		
 	    </div>
 	    
