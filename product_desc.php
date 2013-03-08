@@ -46,6 +46,12 @@
 	    position: relative;
 	    top: 10px;
 	    }
+	#pre_steps{
+		-moz-box-shadow: 3px 3px 3px #ccc;
+    -webkit-box-shadow: 3px 3px 3px #ccc;
+    box-shadow: 3px 3px 3px #ccc;
+    border: 1px solid #E9E9E9;
+	    }
     </style>
     <body>
 	    <?php include("includes/header.php");?>
@@ -66,8 +72,8 @@
                     <ul>
                         <li class="selected">
                             <a href="#"
-			    style = "border-bottom-left-radius: 10px;
-				    border-top-left-radius: 10px;"
+			    style = "border-bottom-left-radius: 5px;
+				    border-top-left-radius: 5px;"
 			    >Description</a>
                         </li>
                         <li>
@@ -75,14 +81,15 @@
                         </li>
                         <li>
                             <a href="#"
-			    style = "border-bottom-right-radius: 10px;
-				     border-top-right-radius: 10px;"
+			    style = "border-bottom-right-radius: 5px;
+				     border-top-right-radius: 5px;"
 			    >Reviews</a>
                         </li>
                         
                     </ul>
                 </div>
 		
+		<div id="pre_steps">
 		
                 <div id="steps">
                     <form id="formElem" name="formElem" action="" method="post">
@@ -91,7 +98,7 @@
                         </fieldset>
                         <fieldset class="step_prod_desc">
                             
-			    ScreenShots comes here.Use apple view style plugin for displaying the images.
+			    <?php include("includes/roundabout_gallery_display.php"); ?>
 			    
                         </fieldset>
                         <fieldset class="step_prod_desc">
@@ -102,6 +109,8 @@
                         
                     </form>
                 </div>
+		
+		</div>
                 
             </div>
 	    
