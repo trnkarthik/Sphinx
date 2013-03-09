@@ -20,38 +20,21 @@
 	
     </head>
     <style>
-        span.reference{
-            position:fixed;
-            left:5px;
-            top:5px;
-            font-size:10px;
-            text-shadow:1px 1px 1px #fff;
-        }
-        span.reference a{
-            color:#555;
-            text-decoration:none;
-			text-transform:uppercase;
-        }
-        span.reference a:hover{
-            color:#000;
-            
-        }
-        h1{
-            color:#ccc;
-            font-size:36px;
-            text-shadow:1px 1px 1px #fff;
-            padding:20px;
-        }
+
 	#sphinx_search {
 	    position: relative;
 	    top: 10px;
 	    }
 	#pre_steps{
 		-moz-box-shadow: 3px 3px 3px #ccc;
-    -webkit-box-shadow: 3px 3px 3px #ccc;
-    box-shadow: 3px 3px 3px #ccc;
-    border: 1px solid #E9E9E9;
+	        -webkit-box-shadow: 3px 3px 3px #ccc;
+	        box-shadow: 3px 3px 3px #ccc;
+	        border: 1px solid #E9E9E9;
 	    }
+	fieldset{
+	    
+	}
+    
     </style>
     <body>
 	    <?php include("includes/header.php");?>

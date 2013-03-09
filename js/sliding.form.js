@@ -14,13 +14,14 @@ $(function() {
 	set the final sum as the total width of the steps element
 	*/
 	var stepsWidth	= 0;
-    var widths 		= new Array();
+	var widths 		= new Array();
 	$('#steps .step_prod_desc').each(function(i){
         var $step 		= $(this);
 		widths[i]  		= stepsWidth;
         stepsWidth	 	+= $step.width();
     });
 	$('#steps').width(stepsWidth);
+	
 	
 	/*
 	to avoid problems in IE, focus the first input of the form
