@@ -29,9 +29,18 @@
       cursor: pointer;
       background-color: #ccc;
       border: 1px solid #999;
+      width: 200px;
+      height: 200px;
    }
    .roundabout-in-focus {
       cursor: auto;
+   }
+   .gallery_ul{
+        padding: 0px;
+        position: relative;
+        top: 139px;
+	margin-left: auto;
+	margin-right: auto;
    }
 </style>
 
@@ -45,7 +54,7 @@
    <li></li>
    <li></li>
    <li></li>
-</ul>
+    </ul>
         
         
         
