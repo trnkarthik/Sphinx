@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2013 at 10:49 PM
+-- Generation Time: Mar 14, 2013 at 09:38 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -91,6 +91,19 @@ CREATE TABLE IF NOT EXISTS `sp_idea_ratings` (
   `idea_rating_datetime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `sp_idea_ratings`
+--
+
+INSERT INTO `sp_idea_ratings` (`idea_id`, `idea_rating_author_id`, `idea_rating_datetime`) VALUES
+(1, 'rahul', '2013-03-08 15:15:31'),
+(1, 'karthik', '2013-03-08 15:16:23'),
+(1, 'rp', '2013-03-08 15:16:29'),
+(2, 'rp', '2013-03-08 15:16:35'),
+(3, 'rp', '2013-03-08 15:16:40'),
+(3, 'karthik', '2013-03-08 15:16:47'),
+(3, 'abcd', '2013-03-08 15:16:54');
+
 -- --------------------------------------------------------
 
 --
@@ -171,6 +184,32 @@ CREATE TABLE IF NOT EXISTS `sp_products_links_clicks` (
   `dateofclick` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sp_products_media`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_products_media` (
+  `product_id` int(11) NOT NULL,
+  `url` varchar(100) NOT NULL,
+  `type` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sp_product_reviews`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_product_reviews` (
+  `review_id` int(10) NOT NULL,
+  `review_author_id` varchar(30) NOT NULL,
+  `review` text NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `review_datetime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
