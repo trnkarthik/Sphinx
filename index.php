@@ -18,11 +18,20 @@
             <script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
             <script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
 
-            <script type="text/javascript" src="fancybox/source/jquery.fancybox.js"></script>
-            <script type="text/javascript" src="fancybox/source/jquery.easing-1.3.pack.js"></script>
-            <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+            <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+            <script type="text/javascript" src="js/jquery.easing-1.3.pack.js"></script>
+            <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
             <script src="js/modernizr.custom.63321.js"></script>
-            <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+            <!--[if lte IE 7]>
+	    <style>
+	    .main{
+		display:none;
+		}
+	    .support-note .note-ie{
+		display:block;
+		}
+	    </style>
+	    <![endif]-->
             <noscript>
                 <style>
                     .step {
@@ -40,42 +49,15 @@
                     }
                 </style>
             </noscript>
-            <script type="text/javascript">
-                var x=1;
-                function doChange()
-                {
-                    var output="";
-                    if(x==0)
-                    {
-                        x=1;
-                        output="<form class=\"form-1\"><p class=\"field\"><input type=\"text\" name=\"login\" placeholder=\"Username or email\"><i class=\"icon-user icon-large\"></i></p><p class=\"field\"><input type=\"password\" name=\"password\" placeholder=\"Password\"><i class=\"icon-lock icon-large\"></i></p><p class=\"submit\"><button type=\"submit\" name=\"submit\"><i class=\"icon-arrow-right icon-large\"></i></button></p></form>";
-                        document.getElementById("registrationButton").innerHTML="<img src='images/registration.gif' style=\"width:100px;height: 26px;\" />";
-                        document.getElementById("headerText").innerHTML="<center><h2>Login</h2></center>";
-			    
-			    
-                    }
-                    else
-                    {
-                        document.getElementById("headerText").innerHTML="<center><h2>Registration</h2></center>";
-                        output="<form class=\"form-1\"><p class=\"field\"><input type=\"text\" name=\"login\" placeholder=\"Username or email\"><i class=\"icon-user icon-large\"></i></p><p class=\"field\"><input type=\"password\" name=\"password\" placeholder=\"Password\"><i class=\"icon-lock icon-large\"></i></p><p style=\"padding-top:10px\" class=\"field\"><input type=\"password\" name=\"repassword\" placeholder=\"Retype Password\"><i class=\"icon-lock icon-large\"></i></p><p class=\"submit\"><button type=\"submit\" name=\"submit\"><i class=\"icon-arrow-right icon-large\"></i></button></p></form>";
-                        document.getElementById("registrationButton").innerHTML="<img src='images/loginButton.png'  style=\"width:100px;height: 26px;\"  />";
-			    
-                        x=0; 
-                    }
-                    document.getElementById("formButton").innerHTML=output;
-                }
-		    
-            </script>
+            
     </head>
-
-
 
     <body>
 
-
-        <div class="header">
+       <div class="header">
             <?php
             include("includes/page_slider.php");
+            include("includes/login_register.php");
             ?>	
 
             <div class="middle">
@@ -120,61 +102,8 @@
         include("includes/home_products.php");
         include("includes/home_footer.php");
         ?>
-
-
-        <div style="display:none"><div id="data">
-                <table style="margin-left: 20px;">
-                    <tr><td  style="padding-right:30px;"  valign="top">
-                            <div id="headerText"><center><h2>Login</h2></center></div>
-
-                            <div id="formButton">
-                                <form class="form-1">
-                                    <p class="field">
-                                        <input type="text" name="login" placeholder="Username or email">
-                                            <i class="icon-user icon-large"></i>
-                                    </p>
-                                    <p class="field">
-                                        <input type="password" name="password" placeholder="Password">
-                                            <i class="icon-lock icon-large"></i>
-                                    </p>
-                                    <p class="submit">
-                                        <button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
-                                    </p>
-                                </form>
-
-
-
-
-
-
-
-
-
-
-                            </div>
-                            <table><tr><td style="padding-right:10px;padding-left:10px"><a href="#"><img src="images/fbloginButton1.png" style="width:72px" /></a></td>
-                                    <td style="padding-right:10px"><a href="#"><img src="images/googleLoginButton.png" style="width:100px" /></a></td>
-                                    <td><a href="#" onclick="doChange()" id="registrationButton"><img src="images/registration.gif" style="width:100px;height: 26px;" /></a></td>
-
-                                </tr></table>
-
-                        </td></tr>
-                </table>
-
-            </div></div>
-        <script>
-		    
-            $("a#inline").fancybox({
-                'openEffect'	:	'fade',
-                'transitionOut'	:	'elastic',
-                'openSpeed '		:	1600, 
-                'speedOut'		:	1200, 
-                'overlayShow'	:	true,
-                'hideOnContentClick': true
-            });
-            $('.fancybox-inner').width(500);    
-        </script>
-
+      
+      
         <?php
         if (isset($_GET['lookup'])) {
             $lookUp = $_GET['lookup'];
