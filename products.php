@@ -129,5 +129,57 @@ $(function() {
 	
     </body>
     	<?php 	include("includes/home_footer.php");	?>
+     <?php
+        if (isset($_GET['lookup'])) {
+            $lookUp = $_GET['lookup'];
+            if ($lookUp == "true") {
+                ?>
+    <!-- This part of the code requires a lot o change. This can only be completed only after all the elements in the page are complete.
+        -->
+                <link rel="stylesheet" type="text/css" href="css/joyride-2.0.3.css" />
+                <script type="text/javascript" src="js/jquery.joyride-2.0.3.js"></script>
+
+                <ol id="joyRideTipContent">
+                    <li data-text="Next" class="custom" data-id="stop1">
+                        <h2>Stop #1</h2>
+                        <p>We are at 1</p>
+                    </li>
+                    <li data-id="stop2" data-button="Next" data-options="tipLocation:top;tipAnimation:pop;scrollSpeed:1000">
+                        <h2>Stop #2</h2>
+                        <p>we are at 2</p>
+                    </li>
+
+                    <li data-id="stop3" data-button="Next" data-options="tipLocation:top;tipAnimation:pop;scrollSpeed:1000">
+                        <h2>Stop #3</h2>
+                        <p>we are at 3</p>
+                    </li>
+                    <li data-id="more2" data-button="Next" data-options="tipLocation:top;tipAnimation:pop;scrollSpeed:1000">
+                        <h2>Stop #4</h2>
+                        <p>we are at end of last</p>
+                    </li>
+
+                    <li data-id="4thstop" data-button="Next" data-options="tipLocation:top;tipAnimation:pop;scrollSpeed:1000">
+                        <h2>Stop #5</h2>
+                        <p>we are at end of last</p>
+                    </li>
+                    <li data-id="more" data-button="close" data-options="tipLocation:top;tipAnimation:pop;scrollSpeed:1000">
+                        <h2>Stop #4</h2>
+                        <p>we are at end of last</p>
+                    </li>
+                </ol>
+
+                <script>
+                    $(window).load(function() {
+                        $('#joyRideTipContent').joyride({postStepCallback : function (index, tip) {
+                                if (index == 2) {
+                                    $(this).joyride('set_li', false, 1);
+                                }
+                            }});
+                    });
+                </script>
+                <?php
+            }
+        }
+        ?>
 
 </html>

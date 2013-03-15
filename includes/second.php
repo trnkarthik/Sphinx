@@ -40,8 +40,8 @@
 <div id="secondary">
     <h2>Hello There!...</h2>
     <p>Welcome to site lookup</p>
-    <p><a href="../Home_lookup.php" target="_parent" ><img src="../images/eye.gif" id="eyeimg">Lookup Home page</a></p>
-    <p><a href="../Home_lookup.php" target="_parent" ><img src="../images/eye.gif" id="eyeimg">Lookup Home page</a></p>
-    <p><a href="../Home_lookup.php" target="_parent" ><img src="../images/eye.gif" id="eyeimg">Lookup Home page</a></p>
-    <p><a href="../Home_lookup.php" target="_parent" ><img src="../images/eye.gif" id="eyeimg">Lookup Home page</a></p>
+    <p><a href="../index.php?lookup=true" target="_parent" >Lookup Home page</a></p>
+    <p><a href="../products.php?lookup=true" target="_parent" >Lookup Products page</a></p>
+    <p><a href="../ideahub.php?lookup=true" target="_parent" >Lookup IdeaHub page</a></p>
+    <p><a href="../about.php?lookup=true" target="_parent" >Lookup About page</a></p>
 </div>
