@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 14, 2013 at 09:38 PM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Host: localhost
+-- Generation Time: Mar 15, 2013 at 11:34 PM
+-- Server version: 5.5.24-log
+-- PHP Version: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -196,6 +196,18 @@ CREATE TABLE IF NOT EXISTS `sp_products_media` (
   `url` varchar(100) NOT NULL,
   `type` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sp_products_media`
+--
+
+INSERT INTO `sp_products_media` (`product_id`, `url`, `type`) VALUES
+(1, '1.png', '1'),
+(1, '2.png', '1'),
+(1, '3.png', '1'),
+(1, '4.png', '1'),
+(1, '5.png', '1'),
+(1, '6.png', '1');
 
 -- --------------------------------------------------------
 
