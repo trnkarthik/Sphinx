@@ -63,6 +63,15 @@
       $(document).ready(function () {
         var carousel = $("#carousel").waterwheelCarousel({
           flankingItems: 1,
+	  separation:150,
+	  //sizeMultiplier:0.2,
+	  opacityMultiplier:0.4,
+	  autoPlay:3000,
+	  //orientation:'vertical',
+	  keyboardNav:true,
+	  preloadImages:false,
+	  forcedImageWidth:300,
+	  forcedImageHeight:400,
           clickedCenter: function ($item) {
             alert("center clicked!");
             $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
@@ -119,7 +128,10 @@
 	-webkit-box-shadow: 2px 2px 2px #ccc;
 	box-shadow: 2px 2px 2px #ccc;
       }
-
+      .carousel-links {
+	position: relative;
+	left: 90%;
+	}
       .split-left {
         width:450px;
         float:left;
@@ -179,10 +191,31 @@
 		    <p>
 			
 			<div id="carousel">
+			    
+			    <?php
+			    $image_query = "select sp_products_media.url from sp_products_media where product_id ='$id'";
+			    //echo $image_query;
+			    $image_query_result = mysql_query($image_query);
+			    
+			    $i = 1;
+			    while($image_row = mysql_fetch_array($image_query_result))
+			    {
+				$url = "http://localhost/Sphinx/images/".$id."/".$image_row[0];
+				$item_id = "item-".$i;
+				echo "<img src='$url' id='$item_id'/>";
+				$i++; 
+			    }
+			    ?>
+			    
+			    <!--
 			    <img src="images/1.png" id="item-1" />
 			    <img src="images/2.png" id="item-2" />
+			    -->
+			    
 			</div>
-			<a href="#" id="prev">Prev</a> | <a href="#" id="next">Next</a>    
+			<div class="carousel-links">
+			    <a href="#" id="prev">Prev</a> | <a href="#" id="next">Next</a>    
+			</div>
 		    </p>
 		</div>
 		
