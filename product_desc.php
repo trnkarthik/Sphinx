@@ -5,6 +5,16 @@
     
     <?php include("includes/meta_details.php"); ?>
     
+    <?php
+    //database connection
+    include("includes/connect.php");
+    
+    //retreiving product id
+    $id= $_GET['product_id'];
+    
+    ?>
+    
+    
     <link rel="stylesheet" type="text/css" href="css/style_alt.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -40,6 +50,11 @@
 	    position: relative;
 	    top: 10px;
 	    }
+	#slider-id{
+	    -moz-box-shadow: 3px 3px 3px #ccc;
+	    -webkit-box-shadow: 3px 3px 3px #ccc;
+	    box-shadow: 3px 3px 3px #ccc;
+	}
     </style>
     
     <!--Water wheeler add-ons -->   
@@ -147,13 +162,16 @@
 	     
 	        <div>
 		    <h2 class="title">Description</h2>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla,
-		    commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Sed volutpat ante
-		    id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim
-		    dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. Sed consectetur
-		    elit id mi consectetur bibendum. Ut enim massa, sodales tempor convallis et, iaculis ac massa.
-		    Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis. Aliquam sit amet purus lectus.
-		    Maecenas tempor ornare sollicitudin.</p>
+		    <p>
+			
+			<?php
+			    $desc_query = "select sp_products.desc from sp_products where id ='$id'";
+			    $desc_query_result = mysql_query($desc_query);
+			    $desc_result = mysql_result($desc_query_result,0);
+			    echo $desc_result;
+			?>
+			
+		    </p>
 		</div>
 		
 		<div>
@@ -163,9 +181,6 @@
 			<div id="carousel">
 			    <img src="images/1.png" id="item-1" />
 			    <img src="images/2.png" id="item-2" />
-			    <img src="images/3.png" id="item-3" />
-			    <img src="images/4.png" id="item-4" />
-			    <img src="images/5.png" id="item-5" />
 			</div>
 			<a href="#" id="prev">Prev</a> | <a href="#" id="next">Next</a>    
 		    </p>
