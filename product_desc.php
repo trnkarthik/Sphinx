@@ -90,8 +90,15 @@ opacity: 1;
 z-index: 280;
 font-size: 13px;    
    }
+   .roundabout-moveable-item img {
+}
+
 </style>
+    
+    
+    
 <script src="js/jquery.roundabout.js"></script>
+
 
 <script>
   /*
@@ -109,9 +116,9 @@ font-size: 13px;
 	 autoplay:false,
 	// autoplayDuration:2000,
 	// autoplayPauseOnHover:true,
+	tilt: 0,
       });
    });
-   
 
 </script>
     
