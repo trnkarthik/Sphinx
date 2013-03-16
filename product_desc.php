@@ -196,14 +196,21 @@
 			    $image_query = "select sp_products_media.url from sp_products_media where product_id ='$id'";
 			    //echo $image_query;
 			    $image_query_result = mysql_query($image_query);
-			    
+			    $noofrows=mysql_numrows($image_query_result);
+			    if($noofrows>0)
+			    {
 			    $i = 1;
 			    while($image_row = mysql_fetch_array($image_query_result))
 			    {
-				$url = "http://localhost/Sphinx/images/".$id."/".$image_row[0];
+				$url = "images/".$id."/".$image_row[0];
 				$item_id = "item-".$i;
 				echo "<img src='$url' id='$item_id'/>";
 				$i++; 
+			    }
+			    }
+			    else
+			    {
+			      echo "<center><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><h3>No Images Found</h3></center>";
 			    }
 			    ?>
 			    
