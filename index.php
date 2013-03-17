@@ -1,7 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en">
     <head>
-
+	
+	<?php
+	    require_once("includes/session.php");
+	    require_once("includes/connect.php");
+	    require_once("includes/functions.php");
+	?>
+	
         <?php include("includes/meta_details.php"); ?>
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
@@ -55,6 +61,8 @@
     <body>
 
        <div class="header">
+	
+	
             <?php
             include("includes/page_slider.php");
             include("includes/login_register.php");
@@ -69,7 +77,11 @@
                     <li><a href="products.php"><div>Products</div></a></li>
                     <li><a href="idea_hub.php"><div>Idea Hub</div></a></li>
                     <li><a href="about.php"><div>About Us</div></a></li>
-
+		    <?php
+			if(logged_in()){
+			    echo "<li><a href='logout.php'><div>Logout</div></a></li>";
+			}
+		    ?>
                 </ul>
             </div>
             <a id="inline" href="#data">Login</a>

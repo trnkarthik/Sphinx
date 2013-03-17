@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 15, 2013 at 11:34 PM
+-- Generation Time: Mar 17, 2013 at 09:01 AM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -242,11 +242,18 @@ CREATE TABLE IF NOT EXISTS `sp_product_version` (
 
 CREATE TABLE IF NOT EXISTS `sp_user_details` (
   `user_id` varchar(30) NOT NULL,
-  `user_first_name` varchar(50) NOT NULL,
-  `user_last_name` varchar(50) NOT NULL,
   `user_dob` date NOT NULL,
   `user_gender` tinyint(2) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sp_user_details`
+--
+
+INSERT INTO `sp_user_details` (`user_id`, `user_dob`, `user_gender`) VALUES
+('1', '2013-03-08', 1),
+('2', '0000-00-00', 1),
+('3', '0000-00-00', 1);
 
 -- --------------------------------------------------------
 
@@ -257,9 +264,20 @@ CREATE TABLE IF NOT EXISTS `sp_user_details` (
 CREATE TABLE IF NOT EXISTS `sp_user_login` (
   `mode` tinyint(2) NOT NULL DEFAULT '0',
   `user_id` varchar(30) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
   `user_email` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL DEFAULT 'g36'
+  `password` varchar(50) NOT NULL DEFAULT 'g36',
+  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sp_user_login`
+--
+
+INSERT INTO `sp_user_login` (`mode`, `user_id`, `user_name`, `user_email`, `password`) VALUES
+(0, '1', 'test', 'a@a.com', 'g36'),
+(0, '2', '1', '1', 'c4ca4238a0b923820dcc509a6f75849b'),
+(0, '3', '2', '2', 'c81e728d9d4c2f636f067f89cc14862c');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

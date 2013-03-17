@@ -1,5 +1,5 @@
 <?php
-include("connect.php");
+//include("connect.php");
 ?>
 <section id="service" class="section service">
     	<div class="container_new"> 
