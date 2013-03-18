@@ -1,4 +1,17 @@
-
+<style>
+	    #login_options{
+			position: absolute;
+			top: 0px;
+			left: 390px;	
+			height: 100%;
+			padding-top: 45px;
+			padding-left: 40px;
+			border-left: 1px solid #E2E2E2;
+	    }
+	    #login_options a{
+			padding :10px
+	    }
+</style>
 <script type="text/javascript">
 	    var x=1;
 	    function doChange()
@@ -24,16 +37,11 @@
              
 <div style="display:none">
 	<div id="data">
-	    	<table border=1px style="margin-left: 20px;">
-		    <tr>
 	        	<div id="headerText">
 				<center>
 				<h2>Login</h2>
 				</center>
 		        </div>	
-		    </tr>
-		    <tr>
-			<td>
 				    <div id="formButton">
 				           <form class="login_reg_form" action="includes/login_check.php" method="post">
 						<p class="field">
@@ -49,27 +57,20 @@
 						</p>
 				           </form>
 				    </div>
-			</td>
-			<td>
-				   <tr>
-						<a href="#">
-						    <img src="images/fbloginButton1.png" style="width:72px" />
+
+				    <div id="login_options">
+					<a href="#">
+						    <img src="images/fbloginButton1.png" style="width:72px;height: 36px;padding-bottom:10px" />
 						</a>
-				    </tr>	
-				    <tr>
 					    	<a href="#">
-						     <img src="images/googleLoginButton.png" style="width:100px" />
+						     <img src="images/googleLoginButton.png" style="width:100px;height: 36px;padding-bottom:10px" />
 					    	</a>
-				    </tr>
-				    <tr>
 					    	<a href="#" onclick="doChange()" id="registrationButton">
-						    <img src="images/registration.gif" style="width:100px;height: 26px;" />
-					    	</a>
-				    </tr> 
-			</td>
-		    </tr>
-		</table>
-            </div></div>
+						    <img src="images/registration.gif" style="width:100px;height: 36px;padding-bottom:10px" />
+					    	</a>	
+				    </div>	
+            </div>
+</div>
         <script>
 		    
             $("a#inline").fancybox({

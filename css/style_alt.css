@@ -371,7 +371,7 @@ line-height: 1.8;
 .login_reg_form {
     /* Size & position */
     width: 300px;
-    margin: 60px auto 30px;
+    margin: 30px 30px 30px 30px;
     padding: 10px;
     position: relative; /* For the submit button positioning */
 
