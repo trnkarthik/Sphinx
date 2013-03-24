@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 17, 2013 at 09:01 AM
+-- Generation Time: Mar 24, 2013 at 06:16 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -216,12 +216,30 @@ INSERT INTO `sp_products_media` (`product_id`, `url`, `type`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `sp_product_reviews` (
-  `review_id` int(10) NOT NULL,
+  `review_id` int(10) NOT NULL AUTO_INCREMENT,
   `review_author_id` varchar(30) NOT NULL,
   `review` text NOT NULL,
   `product_id` int(11) NOT NULL,
-  `review_datetime` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `review_datetime` datetime NOT NULL,
+  PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `sp_product_reviews`
+--
+
+INSERT INTO `sp_product_reviews` (`review_id`, `review_author_id`, `review`, `product_id`, `review_datetime`) VALUES
+(1, '2', 'This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1This is review 1', 1, '2013-03-23 19:36:35'),
+(2, '2', 'This is review 2', 1, '2013-03-23 19:37:24'),
+(3, '2', 'This is review 3', 1, '2013-03-23 19:37:31'),
+(4, '2', 'This is review 4', 1, '2013-03-23 19:38:08'),
+(5, '2', 'This is review 5', 1, '2013-03-23 19:38:08'),
+(6, '2', 'This is review 6', 1, '2013-03-23 19:38:08'),
+(7, '2', 'This is review 7', 1, '2013-03-23 19:38:08'),
+(8, '2', 'This is review 8', 1, '2013-03-23 19:38:44'),
+(9, '2', 'This is review 9', 1, '2013-03-23 19:38:44'),
+(10, '2', 'This is review 10', 1, '2013-03-23 19:38:44'),
+(11, '2', 'This is review 11', 1, '2013-03-23 19:38:44');
 
 -- --------------------------------------------------------
 
@@ -243,17 +261,18 @@ CREATE TABLE IF NOT EXISTS `sp_product_version` (
 CREATE TABLE IF NOT EXISTS `sp_user_details` (
   `user_id` varchar(30) NOT NULL,
   `user_dob` date NOT NULL,
-  `user_gender` tinyint(2) NOT NULL DEFAULT '1'
+  `user_gender` tinyint(2) NOT NULL DEFAULT '1',
+  `user_profile_pic` varchar(100) NOT NULL DEFAULT 'images/1.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sp_user_details`
 --
 
-INSERT INTO `sp_user_details` (`user_id`, `user_dob`, `user_gender`) VALUES
-('1', '2013-03-08', 1),
-('2', '0000-00-00', 1),
-('3', '0000-00-00', 1);
+INSERT INTO `sp_user_details` (`user_id`, `user_dob`, `user_gender`, `user_profile_pic`) VALUES
+('1', '2013-03-08', 1, 'images/1.png'),
+('2', '0000-00-00', 1, 'images/1.png'),
+('3', '0000-00-00', 1, 'images/1.png');
 
 -- --------------------------------------------------------
 
@@ -275,8 +294,8 @@ CREATE TABLE IF NOT EXISTS `sp_user_login` (
 --
 
 INSERT INTO `sp_user_login` (`mode`, `user_id`, `user_name`, `user_email`, `password`) VALUES
-(0, '1', 'test', 'a@a.com', 'g36'),
-(0, '2', '1', '1', 'c4ca4238a0b923820dcc509a6f75849b'),
+(0, '1', 'testinit', 'a@a.com', 'g36'),
+(0, '2', 'Test', '1', 'c4ca4238a0b923820dcc509a6f75849b'),
 (0, '3', '2', '2', 'c81e728d9d4c2f636f067f89cc14862c');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
