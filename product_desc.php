@@ -150,7 +150,37 @@
       }
     </style>
     
-    
+   <script src="js/jquery.expander.min.js"></script>
+
+   <script>
+    // you can override default options globally, so they apply to every .expander() call
+$.expander.defaults.slicePoint = 250;
+
+$(document).ready(function() {
+  // simple example, using all default options unless overridden globally
+  //$('.comments_expand').expander();
+
+  // *** OR ***
+
+  // override default options (also overrides global overrides)
+    $('.comments_expand').expander({
+	slicePoint:       200,  // default is 100
+	expandPrefix:     '...', // default is '... '
+	expandText:       'show more', // default is 'read more'
+	collapseTimer:    5000, // re-collapses after 5 seconds; default is 0, so no re-collapsing
+	userCollapseText: 'show less',  // default is 'read less'
+	preserveWords: true,
+	moreClass: 'read-more',
+	lessClass: 'read-less',
+	});
+    });
+
+   </script>
+    <style>
+	.read-more,.read-less,.comments_expand a{
+	    color:red;
+	}
+    </style>
     </head>
     <body>
     <?php include("includes/header.php");?>
@@ -170,7 +200,7 @@
 		</ul>
 	    </div>
          
-	    <div class="coda-slider"  id="slider-id">  
+	    <div class="coda-slider"  id="slider-id" style="min-height: 1000px">  
 	     
 	        <div>
 		    <h2 class="title">Description</h2>
@@ -226,19 +256,49 @@
 		    </p>
 		</div>
 		
-		<div>
+		<div style="max-height: 950px;">
 		    <h2 class="title">Reviews</h2>
-		    <p>Cras luctus fringilla odio vel hendrerit. Cras pulvinar auctor sollicitudin.
-		    Sed lacus quam, sodales sit amet feugiat sit amet, viverra nec augue.
-		    Sed enim ipsum, malesuada quis blandit vel, posuere eget erat.
-		    Sed a arcu justo. Integer ultricies, nunc at lobortis facilisis, ligula lacus vestibulum quam,
-		    id tincidunt sapien arcu in velit. Vestibulum consequat augue et turpis condimentum mollis sed
-		    vitae metus. Morbi leo libero, tincidunt lobortis fermentum eget, rhoncus vel sem.
-		    Morbi varius viverra velit vel tempus. Morbi enim turpis, facilisis vel volutpat at,
-		    condimentum quis erat. Morbi auctor rutrum libero sed placerat. Etiam ipsum velit, eleifend
-		    in vehicula eu, tristique a ipsum. Donec vitae quam vel diam iaculis bibendum eget ut diam.
-		    Fusce quis interdum diam. Ut urna justo, dapibus a tempus sit amet, bibendum at lectus.
-		    Sed venenatis molestie commodo.</p>
+		    
+		    <div id="post_comment">
+			<div class="">
+			    <p>
+				Post Comment Box Comes Here...
+			    </p>
+			</div>
+			
+		    </div>
+		    
+		    <div id="reviews" >
+			
+			<?php
+			$reviews_query = "select review,review_author_id,review_datetime from sp_product_reviews where product_id ='$id'";
+			$reviews_query_result = mysql_query($reviews_query);
+			$no_of_reviews = mysql_numrows($reviews_query_result);
+			
+			//echo $no_of_reviews;
+			
+			while($row = mysql_fetch_array($reviews_query_result))
+			{
+			    $user_profile_image_query = "select user_profile_pic from sp_user_details where user_id='$row[1]'";
+			    //echo $user_profile_image_query;
+			    $user_profile_image_result = mysql_query($user_profile_image_query);
+			    $user_profile_image = mysql_result($user_profile_image_result,0);
+			    
+			    $user_name_query = "select user_name from sp_user_login where user_id='$row[1]'";
+			    //echo $user_name_query;
+			    $user_name_result = mysql_query($user_name_query);
+			    $user_name = mysql_result($user_name_result,0);
+			    
+			    echo "<div class='comment_data'>";
+			    //echo "<img src='".$user_profile_image."' width=50px height=50px>";
+			    echo "<div class='user_name_display'><b>".$user_name."</b> at $row[2] <i>wrote</i></div>";
+			    echo "<div class='comments_expand'>".$row[0]."</div>";
+			    echo "</div>";
+			}
+			?>
+			
+		    </div>
+		    
 		</div>
 		
 	    </div>
