@@ -65,10 +65,25 @@
                 {
                     limit: $("a.more_results[data-next]").attr("data-next") ,
                     order: $("#sort_order input[type=radio]:checked").val(),
-                    attr: $("#filter_by_sort input[type=radio]:checked").val()
+                    attr: $("#filter_by_sort input[type=radio]:checked").val(),
+                    search: $("#search_box").val()
                 },function(data){
                     $("#applications").quicksand($(data), {
                         duration: 800,
+                        easing: 'swing'
+                    });
+                });
+            });
+            $("#search_box").keyup(function (){
+                 $.get("handles/ajax_products.php",
+                {
+                    limit: $("a.more_results[data-next]").attr("data-next") ,
+                    order: $("#sort_order input[type=radio]:checked").val(),
+                    attr: $("#filter_by_sort input[type=radio]:checked").val(),
+                    search: $("#search_box").val()
+                },function(data){
+                    $("#applications").quicksand($(data), {
+                        duration: 400,
                         easing: 'swing'
                     });
                 });

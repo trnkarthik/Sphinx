@@ -9,12 +9,17 @@ include("../includes/connect.php");
     $limit=$_GET['limit'];
     $order=$_GET['order'];
     $attr=$_GET['attr'];
+    $search = $_GET['search'];
     
      $query = "SELECT a.idea_id ,a.idea_author_id,a.idea_title as title,a.idea_description,
         a.idea_datetime ,count(b.idea_id) as rating
         FROM `sp_ideas` a 
-        left join `sp_idea_ratings` b on  a.idea_id=b.idea_id 
-        group by b.idea_id
+        left join `sp_idea_ratings` b on  a.idea_id=b.idea_id ";
+     if(isset($search)){
+         $query .= " where a.idea_title like '%$search%' ";
+     }
+    
+      $query .=  "group by b.idea_id
         order by $attr $order limit $limit,$UPPER_LIMIT";
 //     echo $query;
     $result = mysql_query($query);
