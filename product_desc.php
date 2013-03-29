@@ -167,7 +167,7 @@ $(document).ready(function() {
 	slicePoint:       200,  // default is 100
 	expandPrefix:     '...', // default is '... '
 	expandText:       'show more', // default is 'read more'
-	collapseTimer:    0, // re-collapses after 5 seconds; default is 0, so no re-collapsing
+	collapseTimer:    5000, // re-collapses after 5 seconds; default is 0, so no re-collapsing
 	userCollapseText: 'show less',  // default is 'read less'
 	preserveWords: true,
 	moreClass: 'read-more',
