@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/coda-slider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-   
+    
    <!--Coda slider add-ons -->
     <script src="./js/jquery-1.7.2.min.js"></script>
     <script src="./js/jquery-ui-1.8.20.custom.min.js"></script>
@@ -82,6 +82,8 @@
           carousel.prev();
           return false
         });
+	
+	
 
         $('#next').bind('click', function () {
           carousel.next();
@@ -93,8 +95,24 @@
           carousel.reload(newOptions);
           return false;
         });
+	
+	
 
+	
       });
+     
+     /* function doGetResults()
+	{
+	  $fetchLength=document.getElementById("fetchLength").value;
+	  $currentLength=document.getElementById("currentLength").value;
+	  alert( $fetchLength+"--"+$currentLength);
+	  //$("#loadReviews").show();
+	  
+	  document.getElementById("loadReviews").style.display="block";
+	//  alert("SOmething");
+	}
+	*/
+      
     </script>
 
     <style type="text/css">
@@ -256,7 +274,7 @@ $(document).ready(function() {
 		    </p>
 		</div>
 		
-		<div style="max-height: 950px;">
+		<div >
 		    <h2 class="title">Reviews</h2>
 		    
 		    <div id="post_comment">
@@ -269,9 +287,10 @@ $(document).ready(function() {
 		    </div>
 		    
 		    <div id="reviews" >
-			
+			<div id="reviewData">
 			<?php
-			$reviews_query = "select review,review_author_id,review_datetime from sp_product_reviews where product_id ='$id'";
+			$limitVal=8;
+			$reviews_query = "select review,review_author_id,review_datetime from sp_product_reviews where product_id ='$id' LIMIT 0 , ".$limitVal;
 			$reviews_query_result = mysql_query($reviews_query);
 			$no_of_reviews = mysql_numrows($reviews_query_result);
 			
@@ -296,6 +315,15 @@ $(document).ready(function() {
 			    echo "</div>";
 			}
 			?>
+		    </div>
+			<center><div id="loadReviewsImage" style="display:none" ><img src="img/ajax-loader.gif"/></div></center>
+			<center><div id="NoMoreReviews" style="display:none" >No More Reviews</div></center>
+			<div id="LoadImages">
+			<center><div id="readMoreReviewsDiv"><input type='button'  id="readMoreReviews" name='readMoreReviews' value='Read More' /></div></center>
+			<input type='hidden' name='fetchLength' id='fetchLength' value='<?php echo $limitVal ?>' />
+			<input type='hidden' name='currentLength' id='currentLength' value='<?php echo $limitVal ?>' />
+			<input type='hidden' name='productID' id='productID' value='<?php echo $id ?>' />
+		       </div>
 			
 		    </div>
 		    
@@ -314,6 +342,41 @@ $(document).ready(function() {
 		
 	    </div>
     </div>
+    
+    <script type="text/javascript" >
+      $(document).ready(function() {
+      $("input#readMoreReviews[type='button']").click(function () {
+	  $("div#loadReviewsImage").show();
+	  var x=parseInt($("input#fetchLength").val());
+	  var y=parseInt($("input#currentLength").val());
+	  var id=parseInt($("input#productID").val());
+	  //x=x+y;
+	  
+	 //alert($("input#fetchLength").val()+"::"+$("input#currentLength").val());
+	  
+	  
+	  var posting = $.post( "getProductReviews.php", { "links": x,"currentStart":y,"id":id } );
+	  posting.done(function( data ) {
+	  //var content = $( data ).find( '#content' );
+	  x=x+y;
+	 
+	  
+	  $("input#currentLength").val(x);
+	  var temp= $("div#reviewData").html()+data;
+	  if(data=="")
+	  {
+	    $("div#NoMoreReviews").show();
+	    $("div#readMoreReviewsDiv").hide();
+	  }
+	  
+	  $("div#reviewData").html(temp);
+	   $("div#loadReviewsImage").hide();
+	  
+	});
+        });
+      });
+      
+    </script>
     
   </body>
 </html>
