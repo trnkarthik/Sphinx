@@ -62,9 +62,9 @@
 					<a href="#">
 						    <img src="images/fbloginButton1.png" style="width:72px;height: 36px;padding-bottom:10px" />
 						</a>
-					    	<a href="#">
-						     <img src="images/googleLoginButton.png" style="width:100px;height: 36px;padding-bottom:10px" />
-					    	</a>
+						<a href="?provider=Google">
+							    <img src="images/googleLoginButton.png" style="width:100px;height: 36px;padding-bottom:10px" />
+						</a>    
 					    	<a href="#" onclick="doChange()" id="registrationButton">
 						    <img src="images/registration.gif" style="width:100px;height: 36px;padding-bottom:10px" />
 					    	</a>	

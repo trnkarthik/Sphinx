@@ -23,24 +23,26 @@
 			while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 			    
 			    ?>
-			    <div class="span3 box">
-				<header class="box-headline" ><h4><?php echo $row[1]; ?> </h4></header>				
-				<i class=" cls"><img src='<?php echo $row[4]; ?>'  width= 10px height=150px /></i>
-				<p class="s-details"><?php echo $row[2]; ?></p>
-
-			    </div>
+			    <a href="product_desc.php?product_id=<?php echo $row[0];?>" >
+				<div class="span3 box">
+					<header class="box-headline" ><h4><?php echo $row[1]; ?> </h4></header>				
+					<i class=" cls"><img src='<?php echo $row[4]; ?>'  width= 10px height=150px /></i>
+					<p class="s-details"><?php echo $row[2]; ?></p>
+				</div>
+			    </a>
 			    <?php
 			     
 			}
 			?>
-			<div class="span3 box">
-				<header class="box-headline" ><h4>More Products</h4></header>	
-                                <div id="more"></div>
-				<i class=" cls"><img src='images/plus_final.png' /></i>
-				<p class="s-details">Click here for more products</p>
-                                <div id="more2"></div>
-				
-			    </div>
+			     <a href="http://localhost/Sphinx/products.php" >	
+				<div class="span3 box">
+					<header class="box-headline" ><h4>More Products</h4></header>	
+				        <div id="more"></div>
+					<i class=" cls"><img src='images/plus_final.png' /></i>
+					<p class="s-details">Click here for more products</p>
+				        <div id="more2"></div>	
+				</div>
+			     </a>
 			</div>
 				
         </div>		
