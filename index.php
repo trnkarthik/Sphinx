@@ -17,7 +17,7 @@
             <link rel="stylesheet" type="text/css" href="css/style_ie.css" />
             <![endif]-->
             <!-- jQuery -->
-            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+            <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
             <!-- jmpress plugin -->
             <script type="text/javascript" src="js/jmpress.min.js"></script>
             <!-- jmslideshow plugin : extends the jmpress plugin -->

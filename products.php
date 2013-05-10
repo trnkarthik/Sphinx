@@ -5,7 +5,7 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
         
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+       <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 	<!--
 	<script src="js/jquery-1.9.1.js"></script> -->
 	<script src="js/jquery-ui-1.10.1.custom.js"></script>
