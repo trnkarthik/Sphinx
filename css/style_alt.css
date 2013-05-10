@@ -398,6 +398,7 @@ line-height: 1.8;
 .login_reg_form .field i {
     /* Size and position */
     left: 0px;
+    top: 0px;
     position: absolute;
     height: 36px;
     width: 36px;

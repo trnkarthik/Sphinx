@@ -49,7 +49,7 @@
     <body>
 
         <?php include("includes/header.php"); ?>
-
+        
         <div class="container">
             <?php include("includes/idea_hub_ideas.php"); ?>
         </ul>

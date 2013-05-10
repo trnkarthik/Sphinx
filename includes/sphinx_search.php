@@ -32,7 +32,7 @@
 </style>
 
 <div id="sphinx_search">
-    <form method="get" action="/search" id="search">
+    <form method="get" action="" id="search">
         <input name="q" type="text" size="40" placeholder="Search..."
                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'"
                id="search_box"
