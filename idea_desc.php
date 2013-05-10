@@ -109,6 +109,11 @@
       textarea#newoptions {
         width:430px;
       }
+      .tab2 a{
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
     </style>
     
    <script src="js/jquery.expander.min.js"></script>
