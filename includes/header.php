@@ -1,7 +1,4 @@
 <div class="header">
-		<?php 
-		    include("page_slider.php");
-		?>	
 		
 		<div class="middle">
 		    <h1>

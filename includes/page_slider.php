@@ -1,14 +1,27 @@
+<style>
+    
+#slide_img{
+width: 30px;
+height: 35px;
+}
+#sidebar_arrow_style{
+    position: fixed;
+    top: 15px;
+    right: 0;
+    z-index: 99999;
+}
+
+</style>
 
     <div id="slide_div">
 	<link rel="stylesheet" type="text/css" href="css/jquery.pageslide.css" />
         
 	
-		<div style="position: absolute;top:24px;left: 90%;z-index: 999;">
+		<div id="sidebar_arrow_style">
                 <a href="includes/second.php" class="first">
-		<img src="images/eye.gif" id=eyeimg>
+		<img src="images/left_slider.png" id="slide_img">
 		</a>
 		</div>
-          
            
     </div>
    

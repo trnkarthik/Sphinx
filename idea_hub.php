@@ -73,6 +73,7 @@
                         easing: 'swing'
                     });
                 });
+               
             });
             $("#search_box").keyup(function (){
                  $.get("handles/ajax_products.php",
@@ -88,12 +89,11 @@
                     });
                 });
             });
+            
             //            $("a.more_results[data-next]").click(function(){
             //                call;
             //                $(this).attr(data-next, $(this).attr(data-next)+ 15);
             //            });
-  
-    
             //    // Custom sorting plugin
             //    (function($) {
             //    $.fn.sorted = function(customOptions) {
