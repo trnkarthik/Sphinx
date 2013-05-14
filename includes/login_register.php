@@ -1,17 +1,34 @@
+  
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+       
 <style>
 	    #login_options{
 			position: absolute;
 			top: 0px;
-			left: 390px;	
+			left: 400px;	
 			height: 100%;
 			padding-top: 45px;
 			padding-left: 40px;
 			border-left: 1px solid #E2E2E2;
 	    }
 	    #login_options a{
-			padding :10px
+			padding :15px
 	    }
+	    #formButton{
+			position: relative;
+			top: 15px;
+	    }
+	    .fancybox-skin{
+			background: red;
+	    }
+	    #headerText h2{
+			font-family: Georgia, Times, "Times New Roman", serif;
+			font-weight: normal;
+	    }
+	    
 </style>
+
 <script type="text/javascript">
 	    var x=1;
 	    function doChange()
@@ -36,11 +53,11 @@
 </script>
              
 <div style="display:none">
-	<div id="data">
+	<div id="data" style="background: red">
 	        	<div id="headerText">
-				<center>
-				<h2>Login</h2>
-				</center>
+				    <center>
+				    <h2>Login</h2>
+				    </center>
 		        </div>	
 				    <div id="formButton">
 				           <form class="login_reg_form" action="includes/login_check.php" method="post">
@@ -62,24 +79,31 @@
 					<a href="#">
 						    <img src="images/fbloginButton1.png" style="width:72px;height: 36px;padding-bottom:10px" />
 						</a>
+					<br/>
 						<a href="?provider=Google">
 							    <img src="images/googleLoginButton.png" style="width:100px;height: 36px;padding-bottom:10px" />
-						</a>    
+						</a>
+						<br/>
 					    	<a href="#" onclick="doChange()" id="registrationButton">
 						    <img src="images/registration.gif" style="width:100px;height: 36px;padding-bottom:10px" />
 					    	</a>	
 				    </div>	
             </div>
 </div>
-        <script>
-		    
-            $("a#inline").fancybox({
-                'openEffect'	:	'fade',
-                'transitionOut'	:	'elastic',
-                'openSpeed '		:	1600, 
-                'speedOut'		:	1200, 
-                'overlayShow'	:	true,
-                'hideOnContentClick': true
-            });
-            $('.fancybox-inner').width(500);    
-        </script>
+	
+	<script type="text/javascript" charset="utf-8">
+	   
+	   
+	    $(document).ready(function(){
+			$("a#inline").prettyPhoto({
+				    default_width: 610,
+				    default_height: 200,
+				    theme:'facebook',
+				    social_tools : false,
+				    animation_speed : 'fast',
+				    hideflash : true,
+			});
+	    });
+	    
+	    
+	</script>

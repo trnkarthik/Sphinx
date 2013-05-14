@@ -6,9 +6,9 @@
 	    require_once("includes/session.php");
 	    require_once("includes/connect.php");
 	    require_once("includes/functions.php");
+	 
+	    include("includes/meta_details.php");
 	?>
-	
-        <?php include("includes/meta_details.php"); ?>
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
             <link rel="stylesheet" type="text/css" href="css/demo.css" />
@@ -24,9 +24,6 @@
             <script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
             <script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
 
-            <script type="text/javascript" src="js/jquery.fancybox.js"></script>
-            <script type="text/javascript" src="js/jquery.easing-1.3.pack.js"></script>
-            <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
             <script src="js/modernizr.custom.63321.js"></script>
             <!--[if lte IE 7]>
 	    <style>
@@ -84,7 +81,6 @@
 
         <?php
         include("includes/home_products.php");
-        include("includes/page_slider.php");
         include("includes/home_footer.php");
         ?>
       

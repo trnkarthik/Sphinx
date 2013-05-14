@@ -3,14 +3,18 @@
   <html xmlns="http://www.w3.org/1999/xhtml">
   <head>	
     
-    <?php include("includes/meta_details.php"); ?>
+	<?php
+	    require_once("includes/session.php");
+	    require_once("includes/connect.php");
+	    require_once("includes/functions.php");
+	 
+	    include("includes/meta_details.php");
+	
+	     //database connection
+	     include("includes/connect.php");
     
-    <?php
-    //database connection
-    include("includes/connect.php");
-    
-    //retreiving product id
-    $id= $_GET['idea_id'];
+	     //retreiving product id
+	     $id= $_GET['idea_id'];
     
     ?>
     
@@ -117,7 +121,7 @@
     </style>
     
    <script src="js/jquery.expander.min.js"></script>
-
+   
    <script>
     // you can override default options globally, so they apply to every .expander() call
 $.expander.defaults.slicePoint = 250;
@@ -147,6 +151,9 @@ $(document).ready(function() {
 	    color:red;
 	}
     </style>
+    
+    
+    
     </head>
     <body>
     <?php include("includes/header.php");?>

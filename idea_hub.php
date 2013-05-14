@@ -1,7 +1,13 @@
 <html lang="en">
     <head>
 
-        <?php include("includes/meta_details.php"); ?>
+	<?php
+	    require_once("includes/session.php");
+	    require_once("includes/connect.php");
+	    require_once("includes/functions.php");
+	 
+	    include("includes/meta_details.php");
+	?>
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/demo.css" />

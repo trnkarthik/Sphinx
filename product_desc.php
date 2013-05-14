@@ -3,7 +3,13 @@
   <html xmlns="http://www.w3.org/1999/xhtml">
   <head>	
     
-    <?php include("includes/meta_details.php"); ?>
+	<?php
+	    require_once("includes/session.php");
+	    require_once("includes/connect.php");
+	    require_once("includes/functions.php");
+	 
+	    include("includes/meta_details.php");
+	?>
     
     <?php
     //database connection
@@ -73,8 +79,9 @@
 	  forcedImageWidth:300,
 	  forcedImageHeight:400,
           clickedCenter: function ($item) {
-            alert("center clicked!");
+            //alert("center clicked!");
             $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+	    alert($item );
           }
         });
 
