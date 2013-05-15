@@ -34,7 +34,7 @@ include("connect.php");
 	 position: relative;
 	 top: 6px;
 	 left: 80%;
-	 width: 23%;
+	 width: 20%;
 	 border: 0px;
       }
       .product_desc{
