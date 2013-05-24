@@ -3,6 +3,7 @@
 #slide_img{
 width: 30px;
 height: 35px;
+background: #FFF;
 }
 #sidebar_arrow_style{
     position: fixed;
